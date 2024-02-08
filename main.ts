@@ -2678,6 +2678,10 @@ function title1 () {
     pause(5000)
     sprites.destroy(Title1)
 }
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
+    info.changeLifeBy(-1)
+    Taylor.setPosition(4, 43)
+})
 let currentLevel = 0
 let levels: Image[] = []
 let scooter: Sprite = null
